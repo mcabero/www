@@ -1,0 +1,34 @@
+<BOUCLE_mot(MOTS){id_mot}>
+<B_articule>
+<div class="twocol-big">
+[<header class="header-block"><h1>(#DESCRIPTIF*)</h1></header>]
+<section class="twocol-notes">
+
+  <BOUCLE_articule(ARTICLES){id_mot}{par date}{inverse}{0,6}>
+	<article class="notes">
+	
+		<B_videos>
+		<BOUCLE_videos(DOCUMENTS){id_article}{extension==(html|mp4|flv|m3u)}{par date}{0,1}>
+			[<figure>(#URL_DOCUMENT|embebido{370,250,0})</figure>]
+			</BOUCLE_videos>
+		</B_videos>
+			[<figure><a href="#URL_ARTICLE">(#LOGO_ARTICLE||image_reduire{370}||inserer_attribut{alt,#TITRE}||inserer_attribut{class,"img-r"})</a></figure>]
+		<//B_videos>
+		
+		<header>
+      <h1><a href="#URL_ARTICLE">#TITRE</a></h1>
+      [(#DESCRIPTIF)<span class="transparency"></span>]
+    </header>
+    <BOUCLEn(MOTS){id_article}{id_groupe=2} >
+    <footer class="[(#DESCRIPTIF|PtoBR)]">
+      <time datetime="2009-11-13">[(#DATE*|affdate_court)]</time>
+      <h4><a href="#URL_MOT">#TITRE</a></h4>
+    </footer>
+    </BOUCLEn>
+	</article>
+  </BOUCLE_articule>
+
+</section>
+</div>
+</B_articule>
+</BOUCLE_mot>

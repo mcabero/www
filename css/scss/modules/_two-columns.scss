@@ -1,0 +1,330 @@
+.twocolumns {
+    padding: 2rem 0 0 0;
+    border-top: 1px $gris7 solid;
+}
+.twocol-group {
+	padding: .675rem 0;
+	@include flexbox();
+	justify-content: flex-end;
+    flex-flow: row wrap;
+
+    &.revert .twocol-big {
+        @include order(1);
+    }
+	.twocol-big {
+		@include flex(2);
+      	@include order(2);
+      	padding: 0 .625rem;
+
+        .header-block {
+           display: block;
+           min-height: 56px;
+        }
+        
+        .twocol-notes {
+            // Activamos Flex en contenedor para grilla interior
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        
+            /*----- Notes Pour creuser -----*/
+            .notes {
+                margin-bottom: 40px;
+                overflow: hidden;
+                background-color: $color-white;
+                width: 47%;
+
+                figure {
+                    max-height: 140px;
+                    overflow: hidden;
+                }
+                header {
+                    padding: 20px 20px 0 20px;
+                    margin-bottom: 20px;
+                    height: 150px;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+
+                    h1 {
+                        font-size: $font-l;
+                        font-weight: $font-weight-medium;
+                        margin-bottom: 12px;
+                    }
+                    p {
+                        font-size: $font-m;
+                        text-align: left;        
+                    }
+                }
+                footer {    
+                    @include font-size(12);
+                    height: 40px;
+                    clear: none;
+                    margin: 0;
+                    position: normal;
+                    color: $color-white;
+                    padding: 0 20px;
+
+                    h4 {
+                        font-family: $font2;
+                        text-transform: uppercase;
+                        font-size: $font-l;
+                        font-weight: $font-weight-bold;
+                        line-height: 40px; 
+
+                        a {
+                            color: $color-white;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    time {
+                        float: right;
+                        font-size: $font-s;
+                        line-height: 40px;
+                    }
+
+                    &.monde {
+                        background-color: $color-monde;
+                    }            
+                    &.politique {
+                        background-color: $color-politique;
+                    }
+                    &.classe {
+                        background-color: $color-classe;
+                        color: $gris46;
+                        a {
+                            color: $gris46;
+                        }
+                    }
+                    &.societe {
+                        background-color: $color-societe;
+                    }
+                    &.debats {
+                        background-color: $color-debats;
+                    }
+                    &.jeunesse {
+                        background-color: $color-jeunesse;
+                    }
+                    &.genres {
+                        background-color: $color-genres;
+                    }
+                    &.culture {
+                        background-color: $color-culture;
+                    }
+                }
+            }
+        }
+
+        /* --- Notes for categories --- */
+        .notes-categories {
+            width: 47%;
+
+            & > h1 {
+                line-height: 30px;
+                border-top: 4px $gris46 solid;
+                background-color: $color-white;
+                font-family: $font2;
+                font-size: $font-l;
+                font-weight: $font-weight-bold;
+                text-transform: uppercase;
+                padding-left: 12px;
+                padding-top: 3px;
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                &.monde {
+                    border-top-color: $color-monde;
+                    
+                    a {
+                        color: $color-monde;
+                    }
+                }            
+                &.politique {
+                    border-top-color: $color-politique;
+
+                    a {
+                        color: $color-politique;
+                    }
+                }
+                &.classe {
+                    border-top-color: $color-classe;
+
+                    a {
+                        color: $color-classe;
+                    }
+                }
+                &.societe {
+                    border-top-color: $color-societe;
+                
+                    a {
+                        color: $color-societe;
+                    }
+                }
+                &.debats {
+                    border-top-color: $color-debats;
+                    
+                    a {
+                        color: $color-debats;
+                    }                
+                }
+                &.jeunesse {
+                    border-top-color: $color-jeunesse;
+                    
+                    a {
+                        color: $color-jeunesse;
+                    }                    
+                }
+                &.genres {
+                    border-top-color: $color-genres;
+                    
+                    a {
+                        color: $color-genres;
+                    }                    
+                }
+                &.culture {
+                    border-top-color: $color-culture;
+
+                    a {
+                        color: $color-culture;
+                    }                
+                }
+            }
+            article {
+                margin: 1.25rem 0;
+
+                &:after {
+                    display: table;
+                    clear: both;
+                    content: "";
+                }
+
+                figure {
+                    overflow: hidden;
+                    max-width: 190px;
+                    height: 100px;
+                    margin-right: 20px;
+                    float: left;
+
+                    @include desktop-s {
+                        max-width: 120px;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                h1 {
+                    font-size: $font-l;
+                    font-weight: $font-weight-medium;
+                    max-height: 96px;
+                    overflow: hidden;
+
+                    @include desktop-s {
+                        font-size: $font-base;
+                    }
+                }
+            }
+        }
+	}
+
+  	.twocol-small {
+  		@include flex(1);
+  		@include order(1);
+  		padding: 0 .625rem;
+
+        .revert & {
+            @include order(2);
+        }
+
+        .opinion {
+            margin-bottom: 3rem;
+            border-top: 2px $color-debats solid;
+            padding-top: .2rem;
+            position: relative;
+
+            h2 {
+                font-size: $font-xl;
+
+                a {
+                    color: $color-debats;
+                    &:hover {
+                        color: $gris46;
+                    }
+                }
+            }
+            .avatar {
+                margin: 30px 0;
+                min-height: 60px;
+                font-size: $font-l;
+
+                figure {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    @include radius(100%, $color-white);
+                    border-width: 2px;
+                    float: left;
+                    margin-right: 16px;
+
+                }
+                h4 {
+                    font-size: $font-base;
+                    padding: 5px;
+
+                    strong {
+                        font-size: $font-l;
+                        display: block;
+                    }
+                }
+            }
+            p {
+                font-size: $font-l;
+                max-height: 96px;
+                overflow: hidden;
+                text-align: left;
+            }
+            .transparency {
+                background-image: linear-gradient(to bottom, transparent, $gris-bg);
+            }
+        }
+        .notes-video {
+
+            h3 {
+                font-size: $font-l;
+                margin-bottom: 12px;
+
+                a {
+                    color: $color-debats;
+                    &:hover {
+                        color: $gris46;
+                    }
+                }
+            }
+        }
+        .notes-aside {
+
+            .notes-item {
+                margin-bottom: 2.5rem;
+
+                h2 {
+                    font-size: $font-l;
+                    font-weight: $font-weight-medium-small;
+                    margin-bottom: .625rem;
+                } 
+                a {
+                    display: block;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+  	}
+}

@@ -1,0 +1,137 @@
+/*----- Border Radius -----*/
+@mixin radius($radius, $color) {
+	border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+ 	border: 1px solid $color;
+}
+
+/*----- Prefixr -----*/
+@mixin prefixr($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+/*----- Transition -----*/
+@mixin transition($transition) {
+	transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+}
+
+/*----- Box Shadow -----*/
+@mixin shadow($shadow) {
+	box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+}
+
+/*----- Font Size to REM -----*/
+@mixin font-size($org) {
+  font-size: $org + px;
+  font-size: ($org/16) + rem;
+}
+
+/* Ref sizes -------------
+
+    18px
+    36px
+    
+    landings
+    h1 48
+    h2 30
+    h3 22
+    h4 18
+    p 16
+    small 14
+*/
+
+/*----- Flexbox -----*/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+
+/*  
+    .wrapper {
+      @include flexbox();
+    }
+
+    .item {
+      @include flex(1 200px);
+      @include order(2);
+    }
+
+*/
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width-s: 1024px;
+$desktop-width-m: 1280px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width-s - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-l {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width-s - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-s {
+  @media (min-width: #{$desktop-width-s}) and (max-width: #{$desktop-width-m - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-m {
+  @media (min-width: #{$desktop-width-m}) {
+    @content;
+  }
+}
+
+/* OPACITY */
+@mixin opaque($val-ie, $val-modern) {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$val-ie)"; // IE8
+  filter: alpha(opacity=$val-ie); // IE 5-7
+  opacity: $val-modern;
+}

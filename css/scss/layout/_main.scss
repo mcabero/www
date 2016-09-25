@@ -1,0 +1,99 @@
+/*----- Main structure -----*/
+.main-content {
+	
+	.category {
+		background-color: $color-debats;
+		color: $color-white;
+		font-family: $font2;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: $font-base;
+		padding: 4px 6px 0 6px;
+		margin: 1.5rem 0;
+
+		&.monde {
+            background-color: $color-monde;
+        }            
+        &.politique {
+            background-color: $color-politique;
+        }
+        &.classe {
+            background-color: $color-classe;
+        }
+        &.societe {
+            background-color: $color-societe;
+        }
+        &.jeunesse {
+            background-color: $color-jeunesse;
+        }
+        &.genres {
+            background-color: $color-genres;
+        }
+        &.culture {
+            background-color: $color-culture;
+        }
+	}
+
+	.main-header {
+		padding-bottom: 1.6rem;
+
+		h1 {
+			font-size: $font-xxxl;
+			font-weight: $font-weight-medium; 
+		}
+		h2 {
+			text-transform: uppercase;
+			font-size: $font-l;
+			font-weight: $font-weight-medium;
+		}
+		.avatar {
+            margin: 1rem 0;
+            min-height: 60px;
+            font-size: $font-l;
+
+            figure {
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+                @include radius(100%, $color-white);
+                border-width: 2px;
+                float: left;
+                margin-right: 16px;
+
+            }
+            h4 {
+                font-size: $font-base;
+                padding: 5px;
+
+                strong {
+                    font-size: $font-l;
+                    display: block;
+                }
+            }
+        }
+        p {
+        	font-size: $font-l;
+        }
+	}
+	.main-columns {
+		padding: 1.6rem 0 2.6rem;
+		border-top: 1px $gris7 solid;
+		
+		.main-columns-container {
+			@include flexbox();
+			justify-content: flex-end;
+		    flex-flow: row wrap;
+			.main-content-inside {
+				@include flex(3 1 75%);
+		      	@include order(1);
+		      	padding-right: 2rem;
+		      	width: 75%;
+			}
+			.main-aside {
+		  		@include flex(1 4 25%);
+		  		@include order(2);
+		  		width: 25%;
+	       	}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+<INCLURE{fond=inc_head_auteur}{id_auteur}>
+
+<body class="page_auteur">
+	 
+<INCLURE{fond=inc_header}>
+
+<BOUCLE_auteur(AUTEURS){id_auteur}>
+<main class="main-content">
+
+  <header class="main-header-category">
+    <div class="container">
+      <div class="toolbar">
+        <div class="fb-share-button" data-href="#URL_AUTEUR" data-layout="button_count" data-header="true" data-stream="false"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="@RevPermanente" data-lang="fr" data-dnt="true">Tweeter</a>
+        <div class="g-plusone"></div>
+      </div>
+      [<div class="avatar"><figure><img src="#URL_SITE_SPIP/IMG/(#LOGO_AUTEUR|fichier)" alt="[(#NOM*)]" class="img-r"></figure></div>]
+      [<h1>(#NOM*)</h1>]
+      [<h2>(#BIO*)</h2>]
+      [<h2>(#PGP*)</h2>]
+      [<h3><a href="(#URL_SITE*)" target="_blank">[(#NOM_SITE*)]</a></h3>]
+    </div><!-- End container -->
+  </header><!-- End main-header-category -->
+
+  <div class="main-columns">
+    <div class="main-columns-container container">
+      <div class="main-content-inside">
+				<header class="header-block"><h1>Articles de cet auteur</h1></header>
+          <INCLURE{fond=mod_mot_grid}{id_auteur}>
+      </div>
+      <aside class="main-aside">
+        <INCLURE{fond=inc_aside}>
+      </aside>
+    </div>
+  </div>
+</main>
+</BOUCLE_auteur>
+<INCLURE{fond=inc_footer_more_articles}>
+<INCLURE{fond=inc_footer}>
+</body>
+</html>

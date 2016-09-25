@@ -1,0 +1,34 @@
+<INCLURE{fond=inc_head}>
+
+<BOUCLE_mot(MOTS){id_mot}>
+<body class="[(#DESCRIPTIF|PtoBR)]">
+
+<INCLURE{fond=inc_header}>
+<main class="main-content">
+
+  <header class="main-header-category">
+    <div class="container">
+      <h2>Section</h2>
+      <h1>#TITRE</h1>
+    </div>
+  </header>
+  
+  <div class="main-columns">
+    <div class="main-columns-container container">
+    
+      <div class="main-content-inside">
+        <INCLURE{fond=mod_mot_grid}{id_mot}{self=#SELF}>
+      </div>
+	  <aside class="main-aside">
+        <INCLURE{fond=inc_aside_mot}{id_mot}>
+      </aside>
+      
+    </div>
+  </div>
+
+</main>
+</BOUCLE_mot>
+
+<INCLURE{fond=inc_footer}>
+</body>
+</html>

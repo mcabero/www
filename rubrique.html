@@ -1,0 +1,38 @@
+<INCLURE{fond=inc_head}>
+ 
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<body class="culture">
+
+<INCLURE{fond=inc_header}>
+<main class="main-content">
+
+  <BOUCLE_rubrique_parent(RUBRIQUES){id_rubrique=#ID_PARENT}>
+  <header class="main-header-category revperm">
+    <div class="container">
+      <h1>#TITRE</h1>
+      [<h4><strong>(#DESCRIPTIF*)</strong></h4>]
+      [<h4>(#TEXTE*)</h4>]
+    </div>
+  </header>
+  </BOUCLE_rubrique_parent>
+
+  <div class="main-columns">
+    <div class="main-columns-container container">
+    
+      <div class="main-content-inside">
+        <INCLURE{fond=mod_rubrique_header}{id_rubrique}>
+        <INCLURE{fond=mod_rubrique_grid}{id_rubrique}>
+      </div>
+      <aside class="main-aside">
+        <INCLURE{fond=inc_aside}>
+      </aside>
+      
+    </div>
+  </div>
+
+</main>
+</BOUCLE_rubrique>
+
+<INCLURE{fond=inc_footer}>
+</body>
+</html>

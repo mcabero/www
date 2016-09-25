@@ -1,0 +1,11 @@
+<BOUCLE_articule(ARTICLES){id_mot}{par titre}{inverse}{0,1}>
+<article class="principal-item">
+<a href="#URL_ARTICLE">
+	<div class="ppal-label">
+		<INCLURE{fond=mod_sections}{id_article}>
+		<h2>#TITRE</h2>
+	</div>
+  [<figure>(#LOGO_ARTICLE||image_reduire{393}||inserer_attribut{alt,#TITRE})</figure>]
+</a>
+</article>
+</BOUCLE_articule> 

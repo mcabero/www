@@ -1,0 +1,14 @@
+<BOUCLE_articule(ARTICLES){id_mot}{par date}{inverse}{0,1}>
+<article class="principal-item">
+<a href="#URL_ARTICLE">
+	<div class="ppal-label">
+		<BOUCLEn(MOTS){id_article}{id_groupe=2} >
+			<b class="[(#DESCRIPTIF|PtoBR)]">#TITRE</b>
+		</BOUCLEn>
+		<h1>#TITRE</h1>
+		[<p>(#DESCRIPTIF|textebrut|couper{160})</p>]
+	</div>
+  [<figure>(#LOGO_ARTICLE||image_reduire{787}||inserer_attribut{alt,#TITRE})</figure>]
+</a>
+</article>
+</BOUCLE_articule>

@@ -1,0 +1,26 @@
+<B_article>
+  <section class="note-list-grid">
+    #ANCRE_PAGINATION
+    <BOUCLE_article(ARTICLES){id_mot?}{id_auteur?}{par date}{inverse}{pagination 30}>
+    <article>
+
+			<B_videos>
+			<BOUCLE_videos(DOCUMENTS){id_article}{extension==(html|mp4|flv|m3u)}{par date}{0,1}>
+				[<figure>(#URL_DOCUMENT|embebido{347,220,0})</figure>]
+				</BOUCLE_videos>
+			</B_videos>
+				[<figure><a href="#URL_ARTICLE">(#LOGO_ARTICLE||image_reduire{347}||inserer_attribut{alt,#TITRE}||inserer_attribut{class,"img-r"})</a></figure>]
+			<//B_videos>
+		
+      <header>    	
+        [<h4>(#SURTITRE)</h4>]
+        <h1><a href="#URL_ARTICLE">#TITRE</a></h1>
+        [<p>(#DESCRIPTIF)</p>]
+        <span class="transparency"></span>
+      </header>
+      [<footer class="meta"><time datetime="2009-11-13">(#DATE*|affdate_court)</time></footer>]
+    </article>
+    </BOUCLE_article>
+  </section>
+  [<p class="pagination"><span class="pages">(#PAGINATION)</span></p>]
+</B_article>

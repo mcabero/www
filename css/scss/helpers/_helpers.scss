@@ -1,0 +1,96 @@
+/*----- Helpers -----*/
+
+/* Divider */
+.line-divider { 
+    width: 100%; 
+    height: 1px; 
+    background-color: $gris20;
+}
+
+/* Margin */
+.m-reset {
+    margin: initial;
+}
+
+/* Padding */
+.p-reset {
+    padding: 0 !important;
+}
+
+.pb-reset {
+    padding-bottom: 0 !important;
+}
+
+.pt-reset {
+    padding-top: 0 !important;
+}
+
+/* Image Responsive */
+.img-r {
+    width: 100%;
+    display: block;
+}
+
+/* Floats */
+.push-left {
+    float: left;
+}
+
+.push-right {
+    float: right;
+}
+
+/* Display */
+.d-inblock {
+    display: inline-block;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.d-none {
+    display: none!important;
+}
+
+/* Positions */
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+
+/* Border */
+.border-none {
+    border: initial !important;
+}
+
+/* Clear fix */
+.clear {
+    clear: both;
+}
+.clearfix:after { 
+   content: "";
+   display: block; 
+   clear: both;
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+/* Text */
+.uppercase {
+    text-transform: uppercase;
+}
+.t-center {
+    text-align: center;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    text-transform: uppercase;
+    font-size: $font-m;
+    color: $gris87;
+    padding-left: 10px; 
+}

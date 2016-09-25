@@ -1,0 +1,25 @@
+/*----- Grid -----*/
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    min-width: 980px;
+    max-width: 1220px;
+    padding: 0 .625rem;
+    position: relative;
+
+    @include mobile {
+        min-width: 320px;
+    }
+    @include tablet {
+        min-width: 768px;
+    }
+}

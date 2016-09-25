@@ -1,0 +1,271 @@
+/* Variables Header */
+$line-height-header: 38px;
+
+/*----- Header -----*/
+
+.header-top {
+    background-color: $color-white;
+    padding-top: 1.125em;
+
+    .nav-secondary {
+        color: $gris27;
+        
+        & > * {
+            padding: 0 7px;
+        }
+        .nav-item {
+            color: $gris27;
+            
+            &.nav-item-contrast {
+                color: $gris95;
+            }
+
+            &:hover {
+                color: $color-debats;
+            }
+        }
+    }
+
+    .nav-social {
+        text-align: right;
+        padding-top: .875em;
+
+        .nav-item {
+            font-size: $font-xl;
+            padding: 0 6px;
+
+            .fa-facebook-square {
+                color: #3b5998;
+            }
+            .fa-twitter-square {
+                color: #00aced;
+            }
+            .fa-youtube-square {
+                color: #cd201f;
+            }                        
+            .fa {
+                &:hover {
+                    @include transition(all .1s ease);
+                    font-size: 1.75rem;
+                }
+            }
+
+        }
+
+    }
+
+    .nav-principal {
+        border-top: 2px solid $color-debats;
+        @include prefixr(box-shadow, 0px 7px 8px -7px $gris71);
+        position: relative;
+        z-index: 5;
+
+        ul {
+            height: $line-height-header;
+
+            > li {
+                float: left;
+                border-left: 1px solid $gris13; 
+
+                .nav-item {
+                    display: block;
+                    padding: 0 1em;
+                    font-size: $font-m;
+                    line-height: $line-height-header;
+                    @include transition(all .3s ease);
+
+                    @include desktop-s {
+                        padding: 0 .6em;
+                    }
+                   
+                    &:hover {
+                        background: $color-debats;
+                        color: $color-white;
+
+                        &.monde {
+                            background-color: $color-monde;
+                        }            
+                        &.politique {
+                            background-color: $color-politique;
+                        }
+                        &.classe {
+                            background-color: $color-classe;
+                        }
+                        &.societe {
+                            background-color: $color-societe;
+                        }
+                        &.jeunesse {
+                            background-color: $color-jeunesse;
+                        }
+                        &.genres {
+                            background-color: $color-genres;
+                        }
+                        &.culture {
+                            background-color: $color-culture;
+                        }                        
+                    }
+
+                }
+            }
+        } 
+        // COLOR BAR NAV PPAL in CATEGORIES
+        .monde & {
+            border-top-color: $color-monde;
+        }            
+        .politique & {
+            border-top-color: $color-politique;
+        }
+        .classe & {
+            border-top-color: $color-classe;
+        }
+        .societe & {
+            border-top-color: $color-societe;
+        }
+        .jeunesse & {
+            border-top-color: $color-jeunesse;
+        }
+        .genres & {
+            border-top-color: $color-genres;
+        }
+        .culture & {
+            border-top-color: $color-culture;
+        }
+    }
+
+    .nav-encemoment {
+        overflow: hidden;
+        height: 38px;
+        background-color: $gris27;
+
+        .nav-block {
+            line-height: $line-height-header;
+            font-size: $font-s;
+            text-transform: uppercase;
+            
+            .nav-item {
+                padding: 0 1em;
+                color: $color-white;
+                @include transition(all .3s ease);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            strong {
+                color: $color-classe;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+
+    .logoRP {
+        width: 70px;
+        height: 62px;
+        float: left;
+        margin-right: 18px; 
+    }
+
+    .logo-title {
+        margin: 0;
+        padding-top: 6px;
+        color: $color-debats;
+        font-family: $font2;
+        font-weight: $font-weight-medium;
+        line-height: $line-height-header;
+        @include font-size(42);
+
+        span {
+            color: $color-jeunesse;
+            font-family: $font2;
+            font-weight: $font-weight-bold;
+            @include font-size(42);
+        }
+    }
+    .logo-sub {
+        font-size: $font-s; 
+        color: $gris53;
+        margin-bottom: 16px;
+    }
+
+    /* Search */    
+    .search {
+        width: 15%;
+        position: relative;
+        margin-right: 0;
+        @include transition(all .3s ease);
+
+        #input-search {
+            background-color: $gris-bg;
+            border: none;
+            padding: 0 2em 0 1.125em;
+            width: 100%;
+            height: $line-height-header;
+            line-height: $line-height-header;
+            color: $gris27;
+            @include transition(all .3s ease);
+
+            &:focus {
+                background-color: $gris13;             
+            }
+        }
+        .loupe {
+            position: absolute;
+            right: 8px;
+            top: 26%;
+            color: $gris27;
+
+            .SearchIcon {
+                width: 18px;
+                height: 18px;
+                fill: currentColor;
+            }
+        }
+    }
+
+    /* Sticky header */
+    .header-item-bottom {
+        background-color: $color-white;
+
+        .header-item-logo {
+            width: 0;
+            float: left;
+            overflow: hidden;
+            @include transition(all 0.3s ease 0s);
+            
+            .logoRP {
+                width: 28px;
+                height: 38px;
+                margin-right: 10px;
+                // display: none;
+            }
+        }
+    
+        &.sticky {
+            position: fixed;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            z-index: 999999999;
+            padding-top: 0px;
+
+            .header-item-logo {
+                width: 38px;
+            }            
+
+            #search {
+                margin-right: 50px; /* 87px LOGIN */  
+                width: 13%;
+                @include transition(all 0.3s ease 0s);
+                .drop-down-box {
+                    top: inherit;
+                    left: inherit;
+
+                    &:before {
+                        right: 15px;
+                        left: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.main-columns-publications {
+
+    .note-list-grid {
+
+        article {
+            margin-bottom: 1.6rem;
+            overflow: hidden;
+            background-color: transparent;
+            width: 32%;
+            position: relative;
+            height: 275px;
+
+            @include mobile {
+                width: 100%;
+                height: auto;
+            }
+
+            .no-flexbox & {
+                @extend .no-flex-fix;
+            }
+
+            figure.rp-front {
+                max-height: 280px;
+                overflow: hidden;
+                -webkit-transform: rotate(-5deg); /* Safari */
+                transform: rotate(-5deg);
+                padding: 1rem 2rem;
+
+                @include desktop-s {
+                    padding: 1rem;
+                }
+                a {
+                    img {
+                        max-width: 210px;
+                        width: 200px;
+                        height: auto;
+
+                        @include desktop-s {
+                            max-width: 178px;
+                        }
+                    }
+                }
+            }
+            footer {    
+                @include font-size(12);
+                height: 46px;
+                margin: 0;
+                background-color: $color-white;
+                padding: 0 20px;
+                border-top: 6px $color-monde solid;
+                z-index: 10;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                h4 {
+                    font-family: $font2;
+                    font-size: $font-base;
+                    font-weight: $font-weight-bold;
+                    line-height: 40px; 
+                    text-transform: none;
+                    text-align: center;
+
+                    a {
+                        color: $gris46;
+
+                        &:hover {
+                            color: $color-monde;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cahiers-title {
+        font-family: $font2;
+        font-weight: $font-weight-medium;
+        font-size: $font-xxl;
+        margin: 1.6rem 0 .6rem 0;
+
+        strong { 
+            font-weight: $font-weight-bold;
+            color: $color-politique;
+        }
+        .fa {
+            color: $color-politique;
+            font-size: $font-xxxl;
+        }
+    }
+    .cahiers-content {
+
+        article {
+
+            footer {
+                border-top-color: $color-politique;
+                background-color: $gris64;
+
+                h4 {
+                    a {
+                        color: $color-white;
+                        &:hover {
+                            color: $color-politique;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+.main-header-publication {
+    margin-bottom: 2.5rem;
+    
+    .rp-content {
+        overflow: hidden;
+        background-color: transparent;
+        width: 32%;
+        position: relative;
+        height: 275px;
+        border-bottom: 6px $color-monde solid;
+        float: left;
+        margin-right: 1.6rem;
+
+        @include desktop-s {
+            height: 250px;
+        }
+
+        @include mobile {
+            width: 100%;
+            float: none;
+        }
+
+        figure.rp-front {
+            max-height: 280px;
+            overflow: hidden;
+            -webkit-transform: rotate(-5deg); /* Safari */
+            transform: rotate(-5deg);
+            padding: 1rem 2rem;
+            @include desktop-s {
+                padding: 1rem;
+            }
+            img {
+                max-width: 210px;
+                @include desktop-s {
+                    max-width: 190px;
+                }
+            }
+        }
+    }        
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+    h4, p {
+        padding-top: 1.6rem;
+        font-size: $font-l;
+        @include desktop-s {
+            padding-top: .6rem;
+            font-size: $font-base;
+        }
+    }
+    h1 {
+        font-size: $font-xxxl;
+        font-weight: $font-weight-medium-small;
+        @include desktop-s {
+            font-size: $font-xxl;
+        }
+    }
+    .download {
+
+        a {
+            color: $color-debats;
+
+            &:hover .fa {
+                @include transition(all .1s ease);
+                font-size: 1.7rem;
+            }
+            .fa {
+            font-size: $font-xl;
+                
+            }
+        }
+    }
+}

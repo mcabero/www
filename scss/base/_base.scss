@@ -1,0 +1,49 @@
+/*----- Default Styles -----*/
+html a {
+    -webkit-font-smoothing: antialiased;
+/*    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);*/
+    text-rendering: optimizeLegibility;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: $gris-bg;
+    font-family: $font1;
+    color: $gris46;
+    font-weight: $font-weight-medium;
+}
+
+h1 {
+    font-size: $font-xl;
+    font-weight: $font-weight-light;
+    margin: 0;
+}
+
+h2 {
+    font-size: $font-l;
+    font-weight: $font-weight-medium;
+}
+
+h3, h4, h5, p, span {
+    font-size: $font-m;
+    font-weight: $font-weight-medium;
+}
+
+a {
+    text-decoration: none;
+    color: $gris46;
+    
+    &:hover {
+        color: $color-debats;
+        @include transition(all .3s ease);
+    }  
+}
+
+button {
+    background: none;
+    border: none;
+    outline-style: none;
+}

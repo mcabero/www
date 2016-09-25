@@ -1,0 +1,30 @@
+<BOUCLE_mot(MOTS){id_mot}>
+<B_articule>
+<div class="slide-notes">
+  <div class="container">
+  [<header class="header-block"><h1>(#DESCRIPTIF*)</h1></header>]
+
+    <div class="flexslider notes">
+      <section class="slides">
+        <BOUCLE_articule(ARTICLES){id_mot}{par date}{inverse}{0,10}>
+        <article>
+          [<figure><a href="#URL_ARTICLE">(#LOGO_ARTICLE||image_reduire{285}||inserer_attribut{alt,#TITRE}||inserer_attribut{class,"img-r"})</a></figure>]
+          <header>
+            <h1><a href="#URL_ARTICLE">#TITRE</a></h1>
+            [(#DESCRIPTIF)<span class="transparency"></span>]
+          </header>
+          <BOUCLEn(MOTS){id_article}{id_groupe=2} >
+          <footer class="[(#DESCRIPTIF|PtoBR)]">
+            <time datetime="2009-11-13">[(#DATE*|affdate_court)]</time>
+            <h4><a href="#URL_MOT">#TITRE</a></h4>
+          </footer>
+          </BOUCLEn>
+        </article>
+        </BOUCLE_articule>
+      </section>
+    </div>
+
+  </div>
+</div>
+</B_articule>
+</BOUCLE_mot>

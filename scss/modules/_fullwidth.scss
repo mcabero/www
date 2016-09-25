@@ -1,0 +1,68 @@
+.fullwidth {
+    //padding: 2.5rem 0px .675rem 0px;
+    padding: 0;
+    background-color: $gris46;
+    max-height: 200px;
+    overflow: hidden;
+
+    @include mobile {
+        display: none;
+    }
+
+    .rp-edition {
+        float: right;
+        background-color: $color-classe;
+        @include radius(100%, $color-classe);
+        font-size: 8rem;
+        font-family: $font2;
+        color: $color-monde;
+        width: 120px;
+        height: 120px;
+        line-height: 130px;
+        text-align: center;
+
+    }
+    .rp-front {
+        float: left;
+        -webkit-transform: rotate(-5deg); /* Safari */
+        transform: rotate(-5deg);
+        margin: 0 30px 0 10px;
+
+        img {
+            max-width: 165px;
+        }
+    }
+    .rp-logo {
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: 30px;
+        @include radius(100%, transparent);
+    }
+    header {
+        color: $color-classe;
+        font-family: $font2;
+
+        h1 {
+            @include font-size(55);
+            line-height: 1;
+        }
+        h4 {
+            @include font-size(34);
+
+             @include desktop-s {
+                @include font-size(22);
+            }
+        }
+
+        a {
+            font-family: $font1;
+            color: $color-white;
+            
+            &:hover {
+                @include transition(all .3s ease);
+                color: $color-classe;
+            }
+        }
+    }
+}

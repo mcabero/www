@@ -1,0 +1,161 @@
+.slide-notes {
+	border-top: 1px $gris7 solid;
+	padding: 2rem 0;
+}
+
+/* SHADOW BOTTOM of NOTES */ 
+.transparency {
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, white);
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+}
+
+.flexslider { 
+    opacity: 0;
+    
+    &, .flexslider:hover {    
+        .flex-prev {
+            left: 0;
+            opacity: 1;
+        }
+        .flex-next {
+            right: 0;
+            opacity: 1;
+        }
+    }
+}
+
+.flex-direction-nav li a {
+    opacity: 1;
+
+    @include desktop-s {
+		background-color: $gris-bg;
+	}
+    &.flex-prev, &.flex-next {
+        position: absolute;
+        display: inline-block;
+        color: $gris46;
+    }
+    &.flex-next {
+        right: -50px;
+        
+        @include desktop-s {
+			right: 5px;
+		}
+    }
+    &.flex-prev {
+        left: -50px;
+
+        @include desktop-s {
+			left: 5px;
+		}
+    }
+    svg.icon {
+        height: 46px;
+        width: 30px;
+        fill: currentColor;
+    }
+}
+#js-preview{
+    .slides{
+        article {
+            width: 285px!important;
+        }
+    }
+}
+.slides {
+    [class*='column-'] {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+    article {
+        margin-right: 20px;
+        overflow: hidden;
+        background-color: $color-white;
+        figure {
+            max-height: 140px;
+            overflow: hidden;
+        }
+        header {
+            padding: 20px 20px 0 20px;
+            margin-bottom: 20px;
+            height: 150px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            h1 {
+                font-size: $font-l;
+                font-weight: $font-weight-medium;
+                margin-bottom: 12px;
+            }
+            p {
+                font-size: $font-m;         
+            }
+        }
+        footer {    
+            @include font-size(12);
+            height: 40px;
+            clear: none;
+            margin: 0;
+            position: normal;
+            color: $color-white;
+            padding: 0 20px;
+
+            h4 {
+                font-family: $font2;
+                text-transform: uppercase;
+                font-size: $font-l;
+                font-weight: $font-weight-bold;
+                line-height: 40px; 
+
+                a {
+                    color: $color-white;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            time {
+                float: right;
+                font-size: $font-s;
+                line-height: 40px;
+            }
+
+            &.monde {
+                background-color: $color-monde;
+            }            
+            &.politique {
+                background-color: $color-politique;
+            }
+            &.classe {
+                background-color: $color-classe;
+            }
+            &.societe {
+                background-color: $color-societe;
+            }
+            &.debats {
+                background-color: $color-debats;
+            }
+            &.jeunesse {
+                background-color: $color-jeunesse;
+            }
+            &.genres {
+                background-color: $color-genres;
+            }
+            &.culture {
+                background-color: $color-culture;
+            }
+        }
+    }
+    #js-preview & {
+        article {
+            width: 285px!important;
+        }
+    }
+}

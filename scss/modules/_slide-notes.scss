@@ -1,0 +1,179 @@
+.slide-notes {
+	border-top: 1px $gris7 solid;
+	padding: 2rem 0;
+
+    @include mobile {
+        border: none;
+    }
+}
+
+/* SHADOW BOTTOM of NOTES */ 
+.transparency {
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, white);
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    left: 0;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.flexslider { 
+    opacity: 0;
+    
+    &, .flexslider:hover {    
+        .flex-prev {
+            left: 0;
+            @include opaque(100, 1);
+        }
+        .flex-next {
+            right: 0;
+            @include opaque(100, 1);
+        }
+    }
+}
+
+.flex-direction-nav li a {
+    @include opaque(100, 1);
+    background-color: $gris-bg;
+	
+    &.flex-prev, &.flex-next {
+        position: absolute;
+        display: inline-block;
+        color: $gris46;
+    }
+    &.flex-next {
+        right: 5px;
+        
+        @include desktop-m {
+			right: -50px;
+		}
+    }
+    &.flex-prev {
+        left: 5px;
+
+        @include desktop-m {
+			left: -50px;
+		}
+    }
+    svg.icon {
+        height: 46px;
+        width: 30px;
+        fill: currentColor;
+    }
+}
+#js-preview{
+    .slides{
+        article {
+            width: 285px!important;
+        }
+    }
+}
+.slides {
+    article {
+        margin-right: 20px;
+        overflow: hidden;
+        background-color: $color-white;
+
+        @include mobile {
+            margin-right: 1em;
+        }
+
+        figure {
+            max-height: 156px;
+            overflow: hidden;
+
+            a {
+                @include opaque(100, 1);
+                &:hover {
+                    @include opaque(80, .8);
+                }
+            }
+        }
+        header {
+            padding: 20px 20px 0 20px;
+            margin-bottom: 20px;
+            height: 150px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            h1 {
+                font-size: $font-l;
+                font-weight: $font-weight-medium;
+                margin-bottom: 12px;
+            }
+            p {
+                font-size: $font-m;
+
+                @include mobile {
+                    display: none;
+                }    
+            }
+        }
+        footer {    
+            @include font-size(12);
+            height: 40px;
+            clear: none;
+            margin: 0;
+            position: normal;
+            color: $color-white;
+            padding: 0 20px;
+
+            h4 {
+                font-family: $font2;
+                text-transform: uppercase;
+                font-size: $font-l;
+                font-weight: $font-weight-bold;
+                line-height: 40px; 
+
+                a {
+                    color: $color-white;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            time {
+                float: right;
+                font-size: $font-s;
+                line-height: 40px;
+            }
+
+            &.monde {
+                background-color: $color-monde;
+            }            
+            &.politique {
+                background-color: $color-politique;
+            }
+            &.classe {
+                background-color: $color-classe;
+            }
+            &.societe {
+                background-color: $color-societe;
+            }
+            &.debats {
+                background-color: $color-debats;
+            }
+            &.jeunesse {
+                background-color: $color-jeunesse;
+            }
+            &.genres {
+                background-color: $color-genres;
+            }
+            &.culture {
+                background-color: $color-culture;
+            }
+        }
+    }
+    #js-preview & {
+        article {
+            width: 285px!important;
+        }
+    }
+}

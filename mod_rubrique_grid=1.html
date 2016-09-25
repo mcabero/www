@@ -1,0 +1,13 @@
+<B_rubrique>
+	<section class="note-list-grid">
+	  #ANCRE_PAGINATION
+	  <BOUCLE_rubrique(RUBRIQUES){id_parent=#ID_RUBRIQUE}{par date}{inverse}{pagination 30}>
+	  <article>
+	    [<figure class="rp-front"><a href="#URL_RUBRIQUE">(#LOGO_RUBRIQUE||image_reduire{281}||inserer_attribut{alt,#TITRE})</a></figure>]
+	    <footer><h4><a href="#URL_RUBRIQUE">#TITRE</a></h4></footer>
+	  </article>
+	  </BOUCLE_rubrique>
+	  <!-- <p class="pagination"><span class="pages"><strong class="on">0</strong><span class="sep"> | </span><a href="Articles?debut_articles=10#pagination_articles" class="lien_pagination" rel="nofollow">10</a><span class="sep"> | </span><a href="Articles?debut_articles=20#pagination_articles" class="lien_pagination" rel="nofollow">20</a><span class="sep"> | </span><a href="Articles?debut_articles=30#pagination_articles" class="lien_pagination" rel="nofollow">30</a><span class="sep"> | </span><a href="Articles?debut_articles=40#pagination_articles" class="lien_pagination" rel="nofollow">40</a><span class="sep"> | </span><a href="Articles?debut_articles=50#pagination_articles" class="lien_pagination" rel="nofollow">50</a><span class="sep"> | </span><a href="Articles?debut_articles=60#pagination_articles" class="lien_pagination" rel="nofollow">60</a><span class="sep"> | </span><a href="Articles?debut_articles=70#pagination_articles" class="lien_pagination" rel="nofollow">70</a><span class="sep"> | </span><a href="Articles?debut_articles=80#pagination_articles" class="lien_pagination" rel="nofollow">80</a></span></p> -->
+	</section>
+	[<p class="pagination"><span class="pages">(#PAGINATION)</span></p>]
+</B_rubrique>

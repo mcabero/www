@@ -1,0 +1,47 @@
+/*
+	[Master Stylesheet]
+	Project: Revolution Permanent
+	Version: 1.0
+	Assigned to: Marcos Cabero
+	contact: marcoscabero@gmail.com / https://goo.gl/zRlmpv
+*/
+
+
+/* ================================ 
+    HELPERS
+=================================== */
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "helpers/_helpers"; 
+@import "helpers/_svg";
+
+/* ================================ 
+    BASE
+=================================== */
+@import "base/_normalize"; 
+@import "base/_base";
+@import "base/_font-awesome";
+
+/* ================================ 
+    LAYOUT
+=================================== */
+@import "layout/_grid";
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_main";
+
+/* ================================ 
+    MODULES
+=================================== */
+@import "modules/_principal.scss";
+@import "modules/_slide-notes.scss";
+@import "modules/_header-block";
+@import "modules/_flex-slider";
+@import "modules/_two-columns";
+@import "modules/_fullwidth";
+@import "modules/_sidebar";
+@import "modules/_note";
+@import "modules/_header-sections";
+@import "modules/_grid-note";
+@import "modules/_grid-publications";
+@import "modules/_pagination";

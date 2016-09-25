@@ -1,0 +1,21 @@
+/*----- SVG Styles -----*/
+
+svg {
+
+    &.icon { 
+        width: 30px;
+        height: 30px;
+
+        &.a-next, &.a-prev {
+            width: 10px;
+            height: 10px;
+            fill: currentColor;
+        }        
+    }
+
+    &.logo {
+        width: 100px;
+        height: 160px;
+        fill: $color-white;
+    }
+}

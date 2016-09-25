@@ -1,0 +1,4 @@
+# Ignore paths that contain generated content.
+.sass-cache/
+node_modules/
+npm-debug.log

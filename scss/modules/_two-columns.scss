@@ -1,0 +1,533 @@
+.twocolumns {
+    padding: 2rem 0 0 0;
+    border-top: 1px $gris7 solid;
+
+    @include mobile {
+        border: none;
+        padding: 0;
+    }
+}
+.twocol-group {
+	padding: .675rem 0;
+	@include flexbox();
+	-webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    @include mobile {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    @include tablet {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    &.revert {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    
+    &.revert .twocol-big {
+        @include order(1);
+
+        @include tablet {
+            width: 66%;
+        }
+    }
+
+    &.revert .twocol-small {
+        @include order(2);
+        
+        @include tablet {
+            width: 33%;
+        } 
+    }
+	.twocol-big {
+		@include flex(2);
+      	@include order(2);
+      	padding: 0 .625rem;
+        width: 66%;
+
+        @include mobile {
+            width: 100%;
+            @include flex(1 1 auto);
+            
+            &.categories {
+                .header-block {
+                    display: none;
+                }
+            }
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        .no-flexbox & {
+            @extend .no-flex-fix;
+        }
+
+        .header-block {
+           display: block;
+           min-height: 56px;
+        }
+        
+        .twocol-notes {
+            @include flexbox();
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            //align-items: center;
+            //align-content: center;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-box-align: stretch;
+            -webkit-align-items: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+
+            .no-flexwrap & {
+                text-align: center;
+            }
+        
+            /*----- Notes Pour creuser -----*/
+            .notes {
+                margin-bottom: 40px;
+                overflow: hidden;
+                background-color: $color-white;
+                width: 47%;
+                -webkit-align-self: stretch;
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                position: relative;
+
+                .no-flexwrap & {
+                    text-align: left;
+                }
+                @include mobile {
+                    margin-bottom: 1em;
+                    
+                    &:nth-child(1), &:nth-child(2) {
+                        width: 100%;
+
+                        h1 {
+                            font-size: $font-l;
+                        }
+                    }
+                }
+
+                .no-flexbox & {
+                    @extend .no-flex-fix;
+                }
+
+
+                figure {
+                    max-height: 156px;
+                    overflow: hidden;
+
+                   a {
+                        @include opaque(100, 1);
+                        &:hover {
+                            @include opaque(80, .8);
+                        }
+                    }
+                }
+                header {
+                    padding: 20px 20px 0 20px;
+                    margin-bottom: 50px;
+                    height: 150px;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+
+                    @include mobile {
+                        padding: .6em .6em 0;
+                        height: auto;
+                    }
+
+                    h1 {
+                        font-size: $font-l;
+                        font-weight: $font-weight-medium;
+                        margin-bottom: 12px;
+
+                        @include mobile {
+                            font-size: $font-base;
+                        }
+                    }
+                    p {
+                        font-size: $font-m;
+                        text-align: left;
+
+                        @include mobile {
+                            display: none;
+                        }   
+                    }
+                }
+                footer {    
+                    height: 40px;
+                    clear: none;
+                    margin: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    color: $color-white;
+                    padding: 0 20px;
+
+                    h4 {
+                        font-family: $font2;
+                        text-transform: uppercase;
+                        font-size: $font-l;
+                        font-weight: $font-weight-bold;
+                        line-height: 40px; 
+
+                        @include mobile {
+                            font-size: $font-m;
+                        }
+
+                        a {
+                            color: $color-white;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    time {
+                        float: right;
+                        font-size: $font-s;
+                        line-height: 40px;
+
+                        @include mobile {
+                            display: none;
+                        }
+
+                    }
+
+                    &.monde {
+                        background-color: $color-monde;
+                    }            
+                    &.politique {
+                        background-color: $color-politique;
+                    }
+                    &.classe {
+                        background-color: $color-classe;
+                        color: $gris46;
+                        a {
+                            color: $gris46;
+                        }
+                    }
+                    &.societe {
+                        background-color: $color-societe;
+                    }
+                    &.debats {
+                        background-color: $color-debats;
+                    }
+                    &.jeunesse {
+                        background-color: $color-jeunesse;
+                    }
+                    &.genres {
+                        background-color: $color-genres;
+                    }
+                    &.culture {
+                        background-color: $color-culture;
+                    }
+                }
+            }
+        }
+
+        /* --- Notes for categories --- */
+        .notes-categories {
+            width: 47%;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            @include tablet {
+                width: 100%;
+            }
+
+            .no-flexbox & {
+                @extend .no-flex-fix;
+            }
+
+            & > h1 {
+                line-height: 30px;
+                border-top: 4px $gris46 solid;
+                background-color: $color-white;
+                font-family: $font2;
+                font-size: $font-l;
+                font-weight: $font-weight-bold;
+                text-transform: uppercase;
+                padding-left: 12px;
+                padding-top: 3px;
+
+                @include mobile {
+                    margin: 0 -.625em 0 -.625em;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                &.monde {
+                    border-top-color: $color-monde;
+                    
+                    a {
+                        color: $color-monde;
+                    }
+                }            
+                &.politique {
+                    border-top-color: $color-politique;
+
+                    a {
+                        color: $color-politique;
+                    }
+                }
+                &.classe {
+                    border-top-color: $color-classe;
+
+                    a {
+                        color: $color-classe;
+                    }
+                }
+                &.societe {
+                    border-top-color: $color-societe;
+                
+                    a {
+                        color: $color-societe;
+                    }
+                }
+                &.debats {
+                    border-top-color: $color-debats;
+                    
+                    a {
+                        color: $color-debats;
+                    }                
+                }
+                &.jeunesse {
+                    border-top-color: $color-jeunesse;
+                    
+                    a {
+                        color: $color-jeunesse;
+                    }                    
+                }
+                &.genres {
+                    border-top-color: $color-genres;
+                    
+                    a {
+                        color: $color-genres;
+                    }                    
+                }
+                &.culture {
+                    border-top-color: $color-culture;
+
+                    a {
+                        color: $color-culture;
+                    }                
+                }
+            }
+            article {
+                margin: 1.25rem 0;
+
+                &:after {
+                    display: table;
+                    clear: both;
+                    content: "";
+                }
+
+                figure {
+                    overflow: hidden;
+                    max-width: 190px;
+                    height: 100px;
+                    margin-right: 20px;
+                    float: left;
+
+                    a {
+                        @include opaque(100, 1);
+                        &:hover {
+                            @include opaque(80, .8);
+                        }
+                    }
+
+                    @include mobile {
+                        max-width: 140px;
+                    }
+                    @include desktop-s {
+                        max-width: 120px;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                h1 {
+                    font-size: $font-base;
+                    font-weight: $font-weight-medium;
+                    max-height: 92px;
+                    overflow: hidden;
+
+                    @include desktop-s {
+                        font-size: $font-base;
+                    }
+                }
+            }
+        }
+	}
+
+  	.twocol-small {
+  		@include flex(1);
+  		@include order(1);
+  		padding: 0 .625rem;
+        width: 33%;
+
+        @include mobile {
+            width: 100%;
+            @include flex(1 1 auto);
+        }
+
+        @include tablet {
+            width: 100%;
+        }        
+
+        .no-flexbox & {
+            @extend .no-flex-fix;
+        }
+
+        .opinion {
+            margin-bottom: 3rem;
+            border-top: 2px $color-debats solid;
+            padding-top: .2rem;
+            position: relative;
+
+            @include mobile {
+                margin-bottom: 1.4rem;
+
+                &:nth-child(2) {
+                    border: none;
+                }
+            }
+
+            h2 {
+                font-size: $font-xxl;
+
+                @include mobile {
+                    font-size: $font-xl;
+                }
+
+                a {
+                    color: $color-debats;
+                    &:hover {
+                        color: $gris46;
+                    }
+                }
+            }
+            .avatar {
+                margin: 30px 0;
+                min-height: 60px;
+                font-size: $font-l;
+
+                @include mobile {
+                    margin: .6em 0;
+                }
+
+                figure {
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    @include radius(100%, $color-white);
+                    border-width: 2px;
+                    float: left;
+                    margin-right: 16px;
+                    margin-bottom: .4em;
+
+                }
+                h4 {
+                    font-size: $font-base;
+                    padding: 5px;
+
+                    @include mobile {
+                        font-size: $font-m;
+                        font-style: italic; 
+                    }
+
+                    strong {
+                        font-size: $font-l;
+                        display: block;
+                        font-style: normal;
+                    }
+                }
+            }
+            p {
+                font-size: $font-l;
+                max-height: 96px;
+                overflow: hidden;
+                text-align: left;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+            .transparency {
+                background-image: linear-gradient(to bottom, transparent, $gris-bg);
+
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+        .notes-video {
+
+            h3 {
+                font-size: $font-l;
+                margin-bottom: 12px;
+
+                a {
+                    color: $color-debats;
+                    &:hover {
+                        color: $gris46;
+                    }
+                }
+            }
+        }
+        .notes-aside {
+
+            .notes-item {
+                margin-bottom: 2.5rem;
+
+                h2 {
+                    font-size: $font-l;
+                    font-weight: $font-weight-medium-small;
+                    margin-bottom: .625rem;
+                } 
+                a {
+                    display: block;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+  	}
+}

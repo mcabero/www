@@ -1,0 +1,146 @@
+.notes-aside {
+
+    .notes-item {
+        .nav-social {
+            line-height: 1;
+
+            a.nav-item {
+                @include font-size(96);
+                padding: 0 6px;
+                display: inline-block;
+
+                @include desktop-s {
+                    @include font-size(76);
+
+                    .fa {
+                        &:hover {
+                            @include font-size(70); 
+                        }
+                    }
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                .fa-facebook-square {
+                    color: #3b5998;
+                }
+                .fa-twitter-square {
+                    color: #00aced;
+                }
+                .fa-youtube-square {
+                    color: #cd201f;
+                }                        
+                .fa {
+                    &:hover {
+                        @include transition(all .1s ease);
+                        @include font-size(90);
+                    }
+                }
+            }
+        }
+    }
+}
+.aside-categories {
+    margin-bottom: 2.5rem;
+
+    .aside-categories-title {
+        line-height: 36px;
+        background-color: $color-debats;
+        font-family: $font2;
+        font-size: $font-l;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        padding-left: 12px;
+        padding-top: 4px;
+
+        a {
+            color: $color-white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &.monde {
+        .aside-categories-title { 
+            background-color: $color-monde;
+        }
+    }           
+    &.politique {
+        .aside-categories-title { 
+            background-color: $color-politique;
+        }
+    }
+    &.classe {
+        background-color: $color-classe;
+    }
+    &.societe {
+        background-color: $color-societe;
+    }
+    &.debats {
+        .aside-categories-title { 
+            background-color: $color-debats;
+        }
+    }
+    &.jeunesse {
+        .aside-categories-title { 
+            background-color: $color-jeunesse;
+        }
+    }
+    &.genres {
+        .aside-categories-title {
+            background-color: $color-genres;
+        }
+    }
+    &.culture {
+        .aside-categories-title {
+            background-color: $color-culture;
+        }
+    }
+    article {
+        margin: 1.25rem 0;
+
+        &:after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        figure {
+            overflow: hidden;
+            max-width: 100px;
+            //height: 100px;
+            margin-right: 20px;
+            float: left;
+
+            @include desktop-s {
+                max-width: 90px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        h1 {
+            font-size: $font-l;
+            font-weight: $font-weight-medium;
+            max-height: 96px;
+            overflow: hidden;
+
+            @include desktop-s {
+                font-size: $font-m;
+            }
+        }
+    }
+}
+.aside-banner {
+    margin-bottom: 2.5rem;
+
+    .aside-banner-title {
+        font-size: $font-lm;
+        font-weight: $font-weight-medium-small;
+        margin-bottom: 16px; 
+    }
+}

@@ -1,0 +1,19 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<header class="main-header-publication">
+
+  <div class="rp-content">
+    [<figure class="rp-front">(#LOGO_RUBRIQUE||image_reduire{300}||inserer_attribut{alt,#TITRE})</figure>]
+    <footer>
+    <!--h4><a href="#">Révolution Permanente No 16</a></h4-->
+    </footer>
+  </div>
+  [<h4>(#DESCRIPTIF*)<h4>]
+  [<h1>(#TITRE*)</h1>]
+  [(#TEXTE)]
+
+  <BOUCLE_documents_joints(DOCUMENTS){id_rubrique}{mode=document}{extension==doc|pdf|xls}>
+    <p class="download"><a href="#URL_DOCUMENT" target="_blank"><i class="fa fa-file-pdf-o"></i> Download PDF</a></p>
+  </BOUCLE_documents_joints>
+  
+</header>
+</BOUCLE_rubrique>

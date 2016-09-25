@@ -1,0 +1,26 @@
+<BOUCLE_articulo(ARTICLES){id_article}>
+
+     <section class="notes-related-group">
+        <h1>A lire aussi</h1>
+
+        <div class="notes-related">
+            <BOUCLE_mot_relation(MOTS){id_article} {id_groupe=7} {0,1}>
+                <BOUCLE_articule_relation(ARTICLES){!id_article=#ID_ARTICLE}{id_mot}{par date}{inverse}{0,4}>
+                    <article class="notes-related-item">
+                            <a href="#URL_ARTICLE">
+                                <div class="ppal-label">
+                                    <B_mot>
+                                        <BOUCLE_mot(MOTS){id_article}{id_groupe=2} >
+                                            <b class="[(#DESCRIPTIF|PtoBR)]">#TITRE</b>
+                                        </BOUCLE_mot>
+                                    </B_mot>
+                                    <h2>#TITRE</h2>
+                                </div>
+                               [<figure>(#LOGO_ARTICLE)</figure>]
+                            </a>
+                    </article>
+                </BOUCLE_articule_relation>
+            </BOUCLE_mot_relation>
+        </div>						
+    </section>
+</BOUCLE_articulo>

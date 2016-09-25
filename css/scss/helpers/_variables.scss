@@ -1,0 +1,82 @@
+/*----- Color -----*/ 
+
+/* Grises */
+$color-white: #fff;
+$gris-bg: #f3f3f3;
+$gris7: #e6e6e6;
+$gris13: #d5d5d5;
+$gris20: #ccc;
+$gris27: #8f8d8d;
+$gris53: #777;
+$gris64: #555;
+$gris71: #444;
+$gris80: #333;
+$gris87: #222;
+$gris95: #111;
+$color-black: #000;
+$color-black-opac: rgba(0, 0, 0, 0.8);
+$gris46: #464646;
+
+/* Pilares */
+$color-gradient: linear-gradient(to right, #ff6c00 0%,#b60098 25%,#009ee0 50%,#a5ba00 75%,#fabb00 100%); 
+$color-series: #f56800; // Series
+$color-sports: #009ee0; // Deportes
+$color-lifestyle: #b60098; // Estilo de vida
+$color-factual: #fabb00; // Documentales
+$color-mundo-fox: #e2003b; // Mundo Fox
+$color-kids: #3fac00; // Kids
+$color-movies: #e3003e; // Movies -- OLD #95a61c
+$color-foxmas: #b89f6f; // ULTIMO COLOR FOX
+$color-monde: #027878; // Monde
+$color-politique: #f37338; // politique
+$color-classe: #fdb632; // La Classe
+$color-societe: #407e4b; // Leur Societe
+$color-debats: #c22326; // Debats
+$color-jeunesse: #464646; // Jeunesse
+$color-genres: #801638; // Bread & genres
+$color-culture: #4eb0c9; // Bread & genres
+
+/*----- Font -----*/
+
+/* Weight */
+$font-weight-light: 100;
+$font-weight-medium-small: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+
+/* Family */
+$font1: 'Roboto', sans-serif;
+$font2: 'Khand', sans-serif;
+
+/* Size */
+$font-xxs: .688rem;
+$font-xs: .750rem;
+$font-s: .8rem; // 12
+$font-m: .875rem; // 14
+$font-base: 1rem; // 16
+$font-l: 1.125rem; // 18
+$font-lm: 1.4rem; // 22
+$font-xl: 1.625rem; // 26
+$font-xxl: 2.250rem; // 36
+$font-xxxl: 2.750rem; // 44
+
+/* Style Text */
+$text-center: center;
+
+/* Line Height */
+$line-height-gral: 1.25em;
+
+/*----- Padding -----*/
+
+$padding-gral: 1.25em;
+$padding-gral-v: .7em 0;
+$padding-gral-h: 0 .7em;
+
+/*----- Margin -----*/
+
+$margin-gral: 1.25em;
+$margin-gral-v: .7em 0;
+$margin-gral-h: 0 .7em;
+
+/*----- Transition -----*/
+$transition-all: all .3s ease 0;

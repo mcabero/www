@@ -1,0 +1,144 @@
+/*----- Main structure -----*/
+.main-content {
+	
+	.category {
+		background-color: $color-debats;
+		color: $color-white;
+		font-family: $font2;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: $font-base;
+		padding: 4px 6px 0 6px;
+		margin: 1.5rem 0;
+
+		&.monde {
+            background-color: $color-monde;
+        }            
+        &.politique {
+            background-color: $color-politique;
+        }
+        &.classe {
+            background-color: $color-classe;
+        }
+        &.societe {
+            background-color: $color-societe;
+        }
+        &.jeunesse {
+            background-color: $color-jeunesse;
+        }
+        &.genres {
+            background-color: $color-genres;
+        }
+        &.culture {
+            background-color: $color-culture;
+        }
+	}
+
+	.main-header {
+		padding-bottom: 1.6rem;
+
+		h1 {
+			font-size: $font-xxxl;
+			font-weight: $font-weight-medium;
+			padding-right: 160px;
+			margin-bottom: 1rem;
+
+			@include mobile {
+				padding: 0;
+				font-size: $font-xl;
+			}
+		}
+		h2 {
+			text-transform: uppercase;
+			font-size: $font-l;
+			font-weight: $font-weight-medium;
+
+			@include mobile {
+				font-size: $font-base;
+				margin-bottom: .6em;
+			}
+		}
+		.avatar {
+            margin: 1rem 0;
+            min-height: 60px;
+            font-size: $font-l;
+
+            figure {
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+                @include radius(100%, $color-white);
+                border-width: 2px;
+                float: left;
+                margin-right: 16px;
+
+            }
+            h4 {
+                font-size: $font-base;
+                padding: 5px;
+
+                strong {
+                    font-size: $font-l;
+                    display: block;
+                }
+            }
+        }
+        p {
+        	font-size: $font-l;
+        }
+	}
+	.main-columns {
+		padding: 1.6rem 0 2.6rem;
+		border-top: 1px $gris7 solid;
+
+		@include mobile {
+			padding: .625rem 0;
+
+			&:after { 
+			   content: "";
+			   display: block; 
+			   clear: both;
+			}
+		}
+		
+		.main-columns-container {
+			@include flexbox();
+			-webkit-box-pack: end;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+		    -webkit-flex-flow: row wrap;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+
+		    @include mobile {
+		    	-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-webkit-flex-direction: column;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+		    }
+			.main-content-inside {
+				@include flex(2 1 auto);
+		      	@include order(1);
+		      	width: 70%;
+
+		      	@include mobile {
+			    	width: 100%;
+			    	// @include flex(3 0px);
+			    	@include flex(3 0 auto);			    	
+			    }
+			}
+			.main-aside {
+		  		@include flex(1 4 auto);
+		  		@include order(2);
+		  		width: 30%;
+		  		padding-left: 2rem;
+
+		  		@include mobile {
+			    	display: none;
+			    }
+	       	}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+.to-top {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	z-index: 90;
+	bottom: 40px;
+	right: 40px;
+	/* image replacement properties */
+	overflow: hidden; 
+	white-space: nowrap;
+	background-color: rgba($gris46, .9);
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+	padding: 0.6rem 0;
+	text-align: center;
+
+	&.cd-is-visible, &.cd-fade-out, .no-touch &:hover {
+		-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+		-moz-transition: opacity .3s 0s, visibility 0s 0s;
+		transition: opacity .3s 0s, visibility 0s 0s;
+	}
+	&.cd-is-visible { /* the button becomes visible */
+		visibility: visible;
+		@include opaque(100, 1);
+	}
+	&.cd-fade-out { /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+		@include opaque(50, .5);
+	}
+	.no-touch &:hover {
+		background-color: rgba($gris46, 1);
+		@include opaque(100, 1);
+	}
+}

@@ -1,0 +1,82 @@
+﻿<INCLURE{fond=inc_head}>
+<body class="debats">
+
+	<INCLURE{fond=inc_header}>
+
+  <!-- NOTA CATASTROFE -->
+  <div class="principal catastrophe">
+  <section class="principal-group container">
+    <div class="principal-item-first principal-catastrophe">
+      <INCLURE{fond=inc_item_first}{id_mot=69}>
+    </div>
+  </section>
+  </div>
+  <!-- / NOTA CATASTROFE -->
+
+	<div class="principal">
+	<section class="principal-group container">
+		<div class="principal-item-first principal-slider">
+		<div class="principal-slides">
+      <INCLURE{fond=inc_item_first}{id_mot=69}>
+      <INCLURE{fond=inc_item_first}{id_mot=70}>
+      <INCLURE{fond=inc_item_first}{id_mot=71}>   
+      <INCLURE{fond=inc_item_first}{id_mot=72}>   
+      <INCLURE{fond=inc_item_first}{id_mot=46}>
+		</div>
+		</div>
+		<div class="principal-item-second">
+			<INCLURE{fond=inc_item_second}{id_mot=47}>
+      <INCLURE{fond=inc_item_second}{id_mot=68}>
+		</div>
+	</section>
+	</div>
+
+	<INCLURE{fond=inc_flexslider_notes}{id_mot=43}>
+	<INCLURE{fond=inc_fullwidth-group}>
+
+  <div class="twocolumns">
+	<section class="twocol-group container">
+		<INCLURE{fond=inc_twocol-big}{id_mot=48}>
+		<INCLURE{fond=inc_twocol-small}{id_mot=49}>  
+	</section>
+	</div>
+
+	<INCLURE{fond=inc_flexslider_notes}{id_mot=44}>
+                
+  <BOUCLE_articule_classe(ARTICLES){id_mot=73}{par date}{inverse}{0,1}>
+  <section class="photo-week">
+  <div class="container">
+  <article class="photo-week-article">
+    <!--a href="#"-->
+    <header class="photo-week-label"><b>Photo de la semaine</b><h1>#SURTITRE</h1><p>#TITRE</p></header>
+    <figure><img src="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" alt="" class="img-r"></figure>
+    <!--/a-->
+  </article>
+  </div><!-- End container -->
+  </section><!-- End Photoweek -->
+  </BOUCLE_articule_classe>
+       
+  <!--	
+  <div class="twocolumns">
+  <section class="twocol-group revert container">
+    < INCLURE{fond=inc_twocol-big}{id_mot=50}>
+    < INCLURE{fond=inc_twocol-small}{id_mot=51}>  
+  </section>
+  </div>
+  < INCLURE{fond=inc_flexslider_notes}{id_mot=45}>
+  -->
+	 
+	<div class="twocolumns">
+  <section class="twocol-group revert container">
+    <INCLURE{fond=inc_autres_articles}>
+    <div class="twocol-small">
+    <aside class="notes-aside">
+      <INCLURE{fond=inc_aside_autres_articles}>
+    </aside>
+    </div>
+  </section>
+	</div>
+       
+	<INCLURE{fond=inc_footer}>
+</body>
+</html>

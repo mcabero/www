@@ -1,0 +1,46 @@
+/*----- Header Blocks -----*/
+
+.header-block{
+    overflow: hidden;
+
+    @include mobile {
+        overflow: auto;
+        margin-left: -.625rem;
+        margin-right: -.625rem;
+        min-height: auto!important;
+    }
+
+    h1, a {
+        margin: 0;
+    }
+    
+    h1 {
+        font-size: $font-xl;
+        width: 100%;
+        font-weight: $font-weight-medium;
+        margin-bottom: 20px;
+
+        @include mobile {
+            background-color: $color-debats;
+            font-weight: $font-weight-bold;
+            color: $color-white;
+            font-size: $font-l;
+            padding: 0 .625rem;
+            text-transform: uppercase;
+            line-height: 1.7rem;
+            margin-bottom: .6em;
+        }
+    }
+    
+    a {
+        font-size: $font-m;
+        display: inline-block;
+        text-align: right;
+        line-height: 2rem;
+
+        &:hover {
+            fill: currentColor;
+        }
+        
+    }
+}

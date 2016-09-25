@@ -1,0 +1,97 @@
+/* --- Note Inner --- */
+
+// Header de Nota
+.main-header {
+	position: relative;
+
+	p {
+		padding-right: 180px;
+	}
+
+	.toolbar {
+		position: absolute;
+		right: 0;
+		bottom: 1.6rem;
+		background-color: red;
+		width: 150px;
+		height: 150px;
+	}
+}
+
+// Cuerpo de Nota
+.main-content-inside {
+
+	.note-slider {
+		position: relative;
+		background-color: $gris46;
+
+		.note-item {
+			color: $color-classe;
+
+			figure {
+				img {
+					width: 100%;
+					height: auto;
+				}
+				figcaption {
+					padding: 0.5rem 1rem;
+					font-size: $font-m;
+					margin-top: -5px;
+				}
+			}
+		}
+		.flex-direction-nav {
+    
+            li {              
+
+                a {
+                    background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+                    color: $color-white;
+                    width: 16px;
+                    height: 80px;
+                    top: 45%;
+                    ;
+
+                    &.flex-next {
+                        right: 0px;
+                        padding-right: 2px
+                    }
+                    &.flex-prev {
+                        left: 0px;
+                        padding-left: 2px
+                    }
+                    svg.icon {
+                        fill: currentcolor;
+                        height: 80px;
+                        width: 9px;
+                    }
+                }
+            }
+        }
+	}
+	.note-content {
+		background-color: $color-white;
+		padding: 2.5rem 2rem;
+		
+		p {
+			font-weight: $font-weight-medium;
+			font-size: $font-base;
+			margin-bottom: .5rem;
+		}
+		h2 {
+			font-size: $font-xl;
+			margin: 2rem 0 1rem 0;
+		}
+		blockquote {
+			padding: 0 4rem;
+			margin: 3rem 0;
+
+			p {
+				font-size: $font-xxl;
+				font-style: italic;
+				font-weight: $font-weight-light;
+				text-align: center;
+			}
+		}
+	}
+}

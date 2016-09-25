@@ -1,0 +1,26 @@
+.pagination {
+	clear: both;
+	text-align: left;
+	margin-top: .5rem;
+
+	.on, .lien_pagination {
+	    font-weight: $font-weight-medium;
+	    background-color: $gris46;
+	    color: #FFF;
+	    padding: .3rem .6rem; 
+	}
+	.pages {
+		font-size: $font-base;
+	}
+	.lien_pagination {
+		background-color: $gris53;
+		margin-left: .2rem;
+		
+		&:hover {
+			background-color: $color-debats;
+		}
+	}
+	.sep {
+		display: none;
+	}
+} 

@@ -1,0 +1,28 @@
+/*----- Header Blocks -----*/
+
+.header-block{
+    overflow: hidden;
+
+    h1, a {
+        margin: 0;
+    }
+    
+    h1 {
+        font-size: $font-xl;
+        width: 70%;
+        font-weight: $font-weight-medium;
+        margin-bottom: 20px;
+    }
+    
+    a {
+        font-size: $font-m;
+        display: inline-block;
+        text-align: right;
+        line-height: 2rem;
+
+        &:hover {
+            fill: currentColor;
+        }
+        
+    }
+}

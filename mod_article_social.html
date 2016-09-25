@@ -1,0 +1,35 @@
+<BOUCLE_articulo(ARTICLES){id_article}>
+    <footer class="note-footer">
+        <div class="note-toolbox">
+    <!--        <div class="fb-share-button" data-href="#URL_ARTICLE" data-layout="button_count" data-header="true" data-stream="false"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="RevPermanente" data-lang="fr" data-dnt="true">Tweeter</a>
+            -->
+    <!--            <div class="fb-like" data-layout="standard" data-action="recommend" data-show-faces="false" data-share="false"></div>
+                -->
+                <p>
+                    <iframe src="http://www.facebook.com/plugins/like.php?href=#URL_SITE_SPIP/#URL_ARTICLE&amp;layout=button_count&amp;show_faces=true&amp;width=120&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:120px; height:20px"></iframe>    
+                </p>
+                
+                <!--p class="note-toolbox-tags">
+                    <span>partager</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=#URL_SITE_SPIP/#URL_ARTICLE&amp;p[title]=#TITLE&amp;p[images][0]=#URL_DOCUMENT" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&via=RevPermanente" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    <a href="javascript:print();"><img style="vertical-align: center;" src="#URL_SITE_SPIP/squelettes/images/icon_imprimer.png" height="20px" width="20px"></img></a>
+                </p-->
+
+                <p class="note-toolbox-social">
+                    <span class="note-toolbox-partager">
+                        partager <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=#URL_SITE_SPIP/#URL_ARTICLE&amp;p[title]=#TITLE&amp;p[images][0]=#URL_DOCUMENT" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                        <a href="https://twitter.com/share?url=#URL_SITE_SPIP/#URL_ARTICLE&via=RevPermanente" target="_blank"><i class="fa fa-twitter-square"></i></a><a href="javascript:print();"><i class="fa fa-print"></i></a>
+                    </span>
+                </p>
+                
+                <p class="note-toolbox-tags">
+                    <span>Mots-clés <i class="fa fa-tags"></i></span> 
+                    <BOUCLE_mot_relation(MOTS){id_article} {id_groupe=7}>
+                        <a href="#URL_MOT">#TITRE</a>
+                    </BOUCLE_mot_relation>
+                </p>
+        </div>
+    <footer>
+</BOUCLE_articulo>

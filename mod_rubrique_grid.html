@@ -1,0 +1,30 @@
+<BOUCLE_rubriques(RUBRIQUES){id_rubrique}>
+<B_sous_rubriques>
+<BOUCLE_sous_rubriques(RUBRIQUES){id_parent}{par id_rubrique}{inverse}>
+
+  <section class="note-list-grid">
+  <header class="main-header-publication">
+    [<h1>(#TITRE*)</h1>]
+    [(#DESCRIPTIF)]
+  </header>
+  </section>
+  
+  <section class="note-list-grid">
+  <BOUCLE_article(ARTICLES){id_rubrique}{par date}>
+    <article>
+      [<figure><a href="#URL_ARTICLE">(#LOGO_ARTICLE||image_reduire{278}||inserer_attribut{alt,#TITRE}||inserer_attribut{class,"img-r"})</a></figure>]
+      <header>
+        [<h4>(#SURTITRE)</h4>]
+        <h1><a href="#URL_ARTICLE">#TITRE</a></h1>
+        [(#DESCRIPTIF)]
+        <span class="transparency"></span>
+      </header>
+	  <!-- <footer class="meta"><h4>Emmanuel Barot</h4></footer> To do: add auteur -->
+    </article>
+  </BOUCLE_article>
+  </section>
+  <!-- <p class="pagination"><span class="pages"><strong class="on">0</strong><span class="sep"> | </span><a href="Articles?debut_articles=10#pagination_articles" class="lien_pagination" rel="nofollow">10</a><span class="sep"> | </span><a href="Articles?debut_articles=20#pagination_articles" class="lien_pagination" rel="nofollow">20</a><span class="sep"> | </span><a href="Articles?debut_articles=30#pagination_articles" class="lien_pagination" rel="nofollow">30</a><span class="sep"> | </span><a href="Articles?debut_articles=40#pagination_articles" class="lien_pagination" rel="nofollow">40</a><span class="sep"> | </span><a href="Articles?debut_articles=50#pagination_articles" class="lien_pagination" rel="nofollow">50</a><span class="sep"> | </span><a href="Articles?debut_articles=60#pagination_articles" class="lien_pagination" rel="nofollow">60</a><span class="sep"> | </span><a href="Articles?debut_articles=70#pagination_articles" class="lien_pagination" rel="nofollow">70</a><span class="sep"> | </span><a href="Articles?debut_articles=80#pagination_articles" class="lien_pagination" rel="nofollow">80</a></span></p> -->
+
+</BOUCLE_sous_rubriques>
+</B_sous_rubriques>
+</BOUCLE_rubriques>

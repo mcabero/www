@@ -1,0 +1,57 @@
+<INCLURE{fond=inc_head_article}{id_article}>
+
+<B_mot>
+<BOUCLE_mot(MOTS){id_article}{id_groupe=2} >
+<body class="[(#DESCRIPTIF|PtoBR)]">
+</BOUCLE_mot>
+<body class="politique">
+<//B_mot>
+	 
+<INCLURE{fond=inc_header}>
+
+<BOUCLE_articule(ARTICLES){id_article}>
+<main class="main-content">
+
+  <div class="container">
+    <INCLURE{fond=mod_header_container}{id_article}>
+    <header class="main-header">
+      <h2>#SURTITRE</h2>
+      <h1>#TITRE</h1>
+      [<p class="time">Publié le (#DATE|affdate)</p>]
+      <INCLURE{fond=mod_auteurs}{id_article}>
+      <div class="toolbar">
+        <div class="fb-share-button" data-href="#URL_ARTICLE" data-layout="button_count" data-header="true" data-stream="false"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="RevPermanente" data-lang="fr" data-dnt="true">Tweeter</a>
+        <div class="g-plusone"></div>
+        <div>
+            <span class="note-toolbox-envoyer"><a href="javascript:print();"><img src="#URL_SITE_SPIP/squelettes/images/icon_imprimer.png" height="30px" width="30px"></img></a></span>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="main-columns">
+    <div class="main-columns-container container">
+      <div class="main-content-inside">
+        <INCLURE{fond=mod_article_slider}{id_article}>
+        <article class="note-content">
+          #CHAPO
+          #TEXTE
+          #PS
+          <INCLURE{fond=mod_article_social}{id_article}>
+        </article>
+        <INCLURE{fond=mod_article_relation}{id_article}>
+        <INCLURE{fond=mod_article_comments}{id_article}>
+          
+      </div>
+      <aside class="main-aside">
+        <INCLURE{fond=inc_aside}{id_article}>
+      </aside>
+    </div>
+  </div>
+</main>
+</BOUCLE_articule>
+<INCLURE{fond=inc_footer_more_articles}>
+<INCLURE{fond=inc_footer}>
+</body>
+</html>

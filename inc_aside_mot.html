@@ -1,0 +1,13 @@
+<BOUCLE_mot(MOTS){!id_mot=#ID_MOT}{id_groupe=2}>
+<section class="aside-categories [(#DESCRIPTIF*)]">
+  <h1 class="aside-categories-title"><a href="#URL_MOT">#TITRE</a></h1>
+  <BOUCLE_article_classe(ARTICLES){id_mot}{par date}{inverse}{0,4}>
+  <article>
+    [<figure><a href="#URL_ARTICLE">(#LOGO_ARTICLE||image_reduire{100}||inserer_attribut{alt,#TITRE}||inserer_attribut{class,"img-r"})</a></figure>]
+    <h1><a href="#URL_ARTICLE">#TITRE</a></h1>
+  </article>
+  </BOUCLE_article_classe>
+</section>
+</BOUCLE_mot>
+
+<INCLURE{fond=inc_aside_banners}>
